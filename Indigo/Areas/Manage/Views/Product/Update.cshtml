@@ -1,0 +1,35 @@
+﻿@using Indigo.Areas.Manage.ViewModels
+@model UpdateProductVM
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="mb-3 col-md-3">
+                <label asp-for="Name" class="form-label">Name</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" style="color:red"></span>
+            </div>
+
+            <div class="mb-3 col-md-3">
+                <label asp-for="ProductDescription" class="form-label">ProductDescription</label>
+                <input asp-for="ProductDescription" class="form-control">
+                <span asp-validation-for="ProductDescription" style="color:red"></span>
+            </div>
+            <div class="mb-3 col-md-3">
+                <label asp-for="ProductImage" class="form-label">ProductImage</label>
+                <input asp-for="ProductImage" class="form-control">
+                <span asp-validation-for="ProductImage" style="color:red"></span>
+            </div>
+
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<script>
+    var btn = document.querySelectorAll(".custom-delete")
+    btn.forEach(b => {
+        b.addEventListener("click", function () {
+            b.parentElement.remove()
+        })
+    })
+</script>

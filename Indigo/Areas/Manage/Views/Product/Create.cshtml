@@ -1,0 +1,31 @@
+﻿@using Indigo.Areas.Manage.ViewModels
+@model CreateProductVM
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="mb-6 col-md-6">
+                <label asp-for="ProductDescription" class="form-label">Product Description</label>
+                <input asp-for="ProductDescription" class="form-control">
+                <span asp-validation-for="ProductDescription" style="color:red"></span>
+            </div>
+           
+
+        </div>
+
+
+        <div class="row">
+            <div class="mb-6 col-md-6">
+                <label asp-for="Name" class="form-label">Product Name</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" style="color:red"></span>
+            </div>
+
+        </div>
+
+
+
+      
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
